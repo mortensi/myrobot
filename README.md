@@ -1,5 +1,7 @@
-# myrobot
-Static analysis of MySQL diagnostics
+# MyRobot
+
+This script performs static analysis of MySQL diagnostics. Diagnostics are collected using the [`sys.diagnostics`](https://dev.mysql.com/doc/refman/8.0/en/sys-diagnostics.html) procedure.
+
 
 ## Usage
 
@@ -11,16 +13,23 @@ CALL sys.diagnostics(60, 60, 'current');
 NOTEE;
 ```
 
-And invoke like:
+And invoke the script like:
 
 ```
-python myrobot.py diag.txt
+python3 myrobot.py diag.txt
 ```
+
+
+## Sample output
+
+![demo](demo.gif)
+
 
 ## Contributing
+
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-Please make sure to update tests as appropriate.
 
 ## License
+
 [MIT](https://choosealicense.com/licenses/mit/)
